@@ -1,0 +1,2 @@
+class Hegdehog < ApplicationRecord
+end

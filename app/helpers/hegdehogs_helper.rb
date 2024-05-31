@@ -1,0 +1,2 @@
+module HegdehogsHelper
+end

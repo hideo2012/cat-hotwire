@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cats</h1>
+
+<%= search_form_for @search do |f| %>
+
+  <%# xxx_cont ....  as LIKE %>
+  <%= f.label :name_cont, "名前" %>
+  <%= f.search_field :name_cont %>
+
+  <%# xxx_eq ....  as Perfect equal %>
+  <%= f.label :age_eq, "年齢" %>
+  <%= f.search_field :age_eq %>
+
+  <%= f.submit %>
+  <%= link_to "クリア", cats_path %>
+<% end %>
+
+<%= sort_link @search, :name %>
+<%= sort_link @search, :age %>
+
+<div id="cats">
+  <% @cats.each do |cat| %>
+    <%= render cat %>
+    <p>
+      <%= link_to "Show this cat", cat %>
+    </p>
+  <% end %>
+</div>
+
+<%= paginate @cats %>
+
+<%= link_to "New cat", new_cat_path %>

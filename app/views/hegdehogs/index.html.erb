@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Hegdehogs</h1>
+
+<div id="hegdehogs">
+  <% @hegdehogs.each do |hegdehog| %>
+    <%= render hegdehog %>
+    <p>
+      <%= link_to "Show this hegdehog", hegdehog %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New hegdehog", new_hegdehog_path %>

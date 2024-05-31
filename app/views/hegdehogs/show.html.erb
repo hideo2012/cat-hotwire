@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @hegdehog %>
+
+<div>
+  <%= link_to "Edit this hegdehog", edit_hegdehog_path(@hegdehog) %> |
+  <%= link_to "Back to hegdehogs", hegdehogs_path %>
+
+  <%= button_to "Destroy this hegdehog", @hegdehog, method: :delete %>
+</div>
