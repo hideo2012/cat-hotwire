@@ -9,7 +9,9 @@
     <div class="col-4">
       <div class="d-flex justify-content-end">
         <%= link_to "編集", edit_cat_path(cat), 
-          class: "btn btn-sm btn-outline-primary me-2" %>
+          class: "btn btn-sm btn-outline-primary me-2",
+          data: { turbo_frame: "modal" }
+        %>
 
         <%= button_to "削除", cat, method: :delete, 
           class: "btn btn-sm btn-outline-danger",
