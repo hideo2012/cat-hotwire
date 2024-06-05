@@ -10,8 +10,13 @@
       <div class="d-flex justify-content-end">
         <%= link_to "編集", edit_cat_path(cat), 
           class: "btn btn-sm btn-outline-primary me-2" %>
+
         <%= button_to "削除", cat, method: :delete, 
-          class: "btn btn-sm btn-outline-danger" %>
+          class: "btn btn-sm btn-outline-danger",
+          form: { data: { turbo_confirm: "本当に削除しますか？" } }
+        %>
+      <%# link_to "delete", cat, calss: "aaa", 
+        data: { turbo_method: :delete, turbo_confirm: "reary?" } %>
       </div>
     </div>
   </div>
