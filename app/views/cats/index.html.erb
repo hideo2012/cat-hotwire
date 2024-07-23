@@ -62,15 +62,16 @@
         </div>
       </div>
 
-<% if false %>
+<% if true %>
       <div id="cats">
         <%= render @cats %>
       </div>
-      <div class="d-flex justify-content-end mt-3">
+      <div class="d-flex justify-content-start mt-3">
         <%= paginate @cats %>
       </div>
 <% end %>
 
+<% if false %>
       <div id="cats">
         <%= turbo_frame_tag "cats-page-#{@cats.current_page}" do %>
           <%= render @cats %>
@@ -80,6 +81,7 @@
           %>
         <% end %>
       </div>
+<% end %>
 
     <% end %><!-- turbo_frame_tag -->
 
